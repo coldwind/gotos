@@ -1,9 +1,9 @@
-# gotoserver
+# gotos
 linux下多服务器自动连接管理工具  
 需要配合ssh key免密登录使用
 ## 使用方式
 ```
-#cd gotoserver
+#cd gotos
 #make
 ```
 ## 所需权限
