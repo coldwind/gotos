@@ -1,13 +1,13 @@
 #!/usr/bin/bash
-SERVER_LIST[0]="servername1 username1 ip1"
-SERVER_LIST[1]="servername2 username2 ip2"
+SERVER_LIST[0]="servername1 username1 ip1 port1"
+SERVER_LIST[1]="servername2 username2 ip2 port2"
 
 flag=0
 num=0
 
 echo "|-server list:"
 for index in ${SERVER_LIST[@]};do
-    if [ 0 -eq $[$flag%3] ]; then
+    if [ 0 -eq $[$flag%4] ]; then
         num=$[$num+1]
         echo -E " |-[$num] "${index}
     fi
@@ -25,4 +25,5 @@ fi
 # 连接服务器
 USER=`echo ${SERVER_LIST[$SERVICE_NUM]} | cut -d ' ' -f 2`
 IP=`echo ${SERVER_LIST[$SERVICE_NUM]} | cut -d ' ' -f 3`
-connect_expect.sh ${USER} ${IP}
+PORT=`echo ${SERVER_LIST[$SERVICE_NUM]} | cut -d ' ' -f 4`
+connect_expect.sh ${USER} ${IP} ${PORT}
