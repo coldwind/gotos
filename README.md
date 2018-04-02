@@ -11,9 +11,10 @@ linux下多服务器自动连接管理工具
 ## 设置IP
 vim main.py
 ```
-SERVER_LIST[0]="servername1 username1 ip1"
-SERVER_LIST[1]="servername2 username2 ip2"
+SERVER_LIST[0]="servername1 username1 ip1 port1"
+SERVER_LIST[1]="servername2 username2 ip2 port2"
 ```
 * servername1 显示给用户的服务器名标签
 * username1 登录服务器的用户名
 * ip1 服务器的IP地址
+* port1 服务器的端口
